@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 @mixin layout($padding, $shadow) {
   box-shadow: $shadow;
   transition: all 0.5s ease-out;
   padding: $padding;
 }
 body {
-  background-image: url('../src/assets/img/riders_background.jpg');
+  background-image: url("../src/assets/img/riders_background.jpg");
   background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -28,20 +28,27 @@ body {
       opacity: 1;
     }
   }
-  h1 {
-font-family: Roboto;
-font-style: normal;
-font-weight: 300;
-font-size: 29px;
-line-height: 53px;
-text-align: center;
-
+  h1,
+  h2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 29px;
+    line-height: 53px;
   }
   p {
     color: #404a3c;
   }
 }
+.create-game-room {
+  width: 45%;
+  margin: 4% 10% 0% 15%;
+}
 .logo {
+  width: 180px !important;
+}
+.header-logo {
+  margin-top: 5px;
   width: 180px !important;
 }
 .input {
@@ -73,14 +80,35 @@ input[type="text"],
   box-sizing: border-box;
   font-size: 12px;
 }
+.invitation {
+  width: 60% !important;
+  position: relative;
+  bottom: 7px;
+}
+.addInvitation {
+  @include layout(6px, 0px 0px 0px #afa8ba);
+  width: 50px;
+  cursor: pointer;
+}
+.invitedPlayers {
+  width: 62%;
+  padding: 14px 20px;
+  margin: 0px 0 10px 0;
+  border: 2px dotted #1e8005;
+  border-radius: 4px;
+  font-size: 16px;
+  position: relative;
+  left: 99px;
+  color: #884919;
+}
 .btn-blue {
-  background-color: teal;
+  background-color: #59a740;
   color: white;
   width: 70%;
 }
 
 .btn-blue:hover {
-  background-color: #209b87;
+  background-color: #3a7926;
   cursor: pointer;
 }
 
