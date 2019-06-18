@@ -42,7 +42,28 @@ body {
 }
 .create-game-room {
   width: 45%;
-  margin: 4% 10% 0% 15%;
+  margin: 4% 6% 0% 8%;
+}
+.user-dashboard {
+  background: rgba(239, 254, 254, 0.68);
+  text-align: center;
+  border-radius: 5px;
+  width: 25%;
+  height: 300px;
+  margin: 4% 0% 0% 3%;
+  figcaption {
+    margin-bottom: 15px;
+  }
+}
+.grid {
+  display: flex;
+}
+.avatar {
+  @include layout(0px, 0px 0px 0px #afa8ba);
+  width: 140px;
+  margin: 15px 0 5px 0;
+  cursor: pointer;
+  border-radius: 100%;
 }
 .logo {
   width: 180px !important;
@@ -60,6 +81,13 @@ body {
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
+}
+.logout {
+  margin-top: 20px;
+  background-color: #ef3405;
+  &:hover {
+    background-color: #d02d04;
+  }
 }
 .right {
   margin-right: auto;
@@ -94,7 +122,7 @@ input[type="text"],
   width: 62%;
   padding: 14px 20px;
   margin: 0px 0 10px 0;
-  border: 2px dotted #1e8005;
+  border-bottom: 2px solid #1e8005;
   border-radius: 4px;
   font-size: 16px;
   position: relative;
