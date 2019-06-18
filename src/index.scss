@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 @mixin layout($padding, $shadow) {
   box-shadow: $shadow;
   transition: all 0.5s ease-out;
   padding: $padding;
 }
 body {
-  background-image: url('../src/assets/img/riders_background.jpg');
+  background-image: url("../src/assets/img/riders_background.jpg");
   background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -28,20 +28,48 @@ body {
       opacity: 1;
     }
   }
-  h1 {
-font-family: Roboto;
-font-style: normal;
-font-weight: 300;
-font-size: 29px;
-line-height: 53px;
-text-align: center;
-
+  h1,
+  h2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 29px;
+    line-height: 53px;
   }
   p {
     color: #404a3c;
   }
 }
+.create-game-room {
+  width: 45%;
+  margin: 4% 6% 0% 8%;
+}
+.user-dashboard {
+  background: rgba(239, 254, 254, 0.68);
+  text-align: center;
+  border-radius: 5px;
+  width: 25%;
+  height: 300px;
+  margin: 4% 0% 0% 3%;
+  figcaption {
+    margin-bottom: 15px;
+  }
+}
+.grid {
+  display: flex;
+}
+.avatar {
+  @include layout(0px, 0px 0px 0px #afa8ba);
+  width: 140px;
+  margin: 15px 0 5px 0;
+  cursor: pointer;
+  border-radius: 100%;
+}
 .logo {
+  width: 180px !important;
+}
+.header-logo {
+  margin-top: 5px;
   width: 180px !important;
 }
 .input {
@@ -53,6 +81,13 @@ text-align: center;
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
+}
+.logout {
+  margin-top: 20px;
+  background-color: #ef3405;
+  &:hover {
+    background-color: #d02d04;
+  }
 }
 .right {
   margin-right: auto;
@@ -73,14 +108,35 @@ input[type="text"],
   box-sizing: border-box;
   font-size: 12px;
 }
+.invitation {
+  width: 60% !important;
+  position: relative;
+  bottom: 7px;
+}
+.addInvitation {
+  @include layout(6px, 0px 0px 0px #afa8ba);
+  width: 50px;
+  cursor: pointer;
+}
+.invitedPlayers {
+  width: 62%;
+  padding: 14px 20px;
+  margin: 0px 0 10px 0;
+  border-bottom: 2px solid #1e8005;
+  border-radius: 4px;
+  font-size: 16px;
+  position: relative;
+  left: 99px;
+  color: #884919;
+}
 .btn-blue {
-  background-color: teal;
+  background-color: #59a740;
   color: white;
   width: 70%;
 }
 
 .btn-blue:hover {
-  background-color: #209b87;
+  background-color: #3a7926;
   cursor: pointer;
 }
 
