@@ -12,7 +12,7 @@ class Questions extends Component {
 		this.state = { isAnswerRight: false };
 	}
 	componentDidMount() {
-		socket.emit('create', 'room1');
+		socket.emit('create', { name: 'room1' });
 		const { handles, history, finishGame } = this.props;
 		const { totalMarks } = handles;
 		console.log('Didimount');
@@ -20,7 +20,6 @@ class Questions extends Component {
 			finishGame({ history, userMark: { roomId: 1, marks: totalMarks } });
 		});
 	}
-
 	render() {
 		const { handles, history } = this.props;
 		const allQuestions = getQns();
