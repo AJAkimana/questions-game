@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import gmailLogo from '../assets/img/gmail.png'
+import gmailLogo from "../assets/img/gmail.png";
+import riderslogo from "../assets/img/riders-logo-png.png";
 
 import "../index";
 class Login extends Component {
@@ -7,9 +8,10 @@ class Login extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Game</h1>
-        <p>Sign up below using:</p>
-        <img src={gmailLogo} alt="Facebook logo" />
+        <img src={riderslogo} alt="Logo" className="logo" />
+        <h1>Welcome to our Gaming room</h1>
+        <p>Sign up / Login below using:</p>
+        <img src={gmailLogo} alt="Facebook logo" className="icon" />
       </div>
     );
   }

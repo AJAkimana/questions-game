@@ -1,17 +1,15 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Provider } from 'react-redux';
-import store from './store'
-import Login from "./components/login";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
+import Routes from "./components/routes";
 
 function App() {
   return (
-    <Provider store = { store }>
-    <BrowserRouter>
-      <Switch>
-      <Route path="/login" component={Login} />
-      </Switch>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
     </Provider>
   );
 }
