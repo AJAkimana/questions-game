@@ -161,3 +161,56 @@ input[type="text"],
   color: #48494a;
   text-decoration: underline;
 }
+.card {
+  border: 1px solid #000;
+    border-radius: 5px;
+    width: 450px;
+    margin: 10px auto 0 auto;
+    background-color: #ecebeb96;
+    padding: 20px;
+    .pull-left{
+      float: left;
+      font-size: 70px;
+      width: 0%;
+      margin-top: 20px;
+    }
+    .user-info {
+      img{
+        width: 100px;
+        border-radius: 100px;
+      }
+    }
+    .pull-right{
+      float: right;
+    font-size: 20px;
+    margin-top: -134px;
+    }
+    .badge-green {
+    padding: 5px;
+    background-color: #1e8005;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 900;
+    }
+    .badge-yellow {
+      padding: 5px;
+      background-color: #c5b803;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 900;
+      }
+      .badge-red{
+        padding: 5px;
+        background-color: #ef3405;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 900;
+        }
+}
+.overflow {
+  overflow: scroll;
+  height: 600px !important;
+}
