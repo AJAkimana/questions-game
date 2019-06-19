@@ -4,6 +4,9 @@ import "./index.scss";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "font-awesome/css/font-awesome.css";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
