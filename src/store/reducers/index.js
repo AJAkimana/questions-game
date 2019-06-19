@@ -1,7 +1,9 @@
 import { combineReducers } from "redux";
-import authReducer from './auth'
+import authReducer from './auth';
+import resultReducer from './results';
 export default combineReducers({
   dummyState: () => "remove me",
-  auth:authReducer
+  auth:authReducer,
+  result:resultReducer
 });
 
