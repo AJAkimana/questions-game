@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import gmailLogo from "../assets/img/gmail.png";
 import riderslogo from "../assets/img/riders-logo-png.png";
-import "../index";
 
 
 const { REACT_APP_API_URL } = process.env;
