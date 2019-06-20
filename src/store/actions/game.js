@@ -11,7 +11,7 @@ export const selectAnswer = (question) => {
 
 export const goToNextQuestion = ({ currentQuestion, totalQuestions, userMark, history }) => {
 	if (currentQuestion >= totalQuestions) {
-		Http.post('api/v1/game/marks', userMark)
+		Http.post('/api/v1/game/marks', userMark)
 			.then((res) => {
 				console.log('Result', res.data);
 				socket.emit('auto_submit', { name: 'room1' });
