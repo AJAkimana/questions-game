@@ -1,4 +1,9 @@
-export const GET_ERRORS = 'GET_ERRORS';
-export const SET_CURRENT_USER = 'SET_CURRENT_USER';
-export const REMOVE_CURRENT_USER = 'REMOVE_CURRENT_USER';
-export const GET_RESULTS = 'GET_RESULTS';
+export const GET_ERRORS = "GET_ERRORS";
+export const SET_CURRENT_USER = "SET_CURRENT_USER";
+export const REMOVE_CURRENT_USER = "REMOVE_CURRENT_USER";
+export const GET_RESULTS = "GET_RESULTS";
+export const SET_PLAYER = "SET_PLAYER";
+export const INVITE_PLAYER = "INVITE_PLAYER";
+export const REMOVE_PLAYER = "REMOVE_PLAYER";
+export const ROOM_NAME = "ROOM_NAME";
+export const CREATE_ROOM = "CREATE_ROOM";
