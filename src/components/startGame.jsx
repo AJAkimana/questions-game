@@ -7,7 +7,8 @@ class startGame extends Component {
   state = {};
   renderer = ({ hours, minutes, seconds, completed }) => {
     if (completed) {
-    this.props.history.push('/questions');
+    const roomId = this.props.match.params.roomId;    
+    this.props.history.push(`/questions/${roomId}`);
       return <h2>done</h2>;
     } else {
       return (
