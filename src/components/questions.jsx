@@ -18,7 +18,7 @@ class Questions extends Component {
 		const { totalMarks } = handles;
 		console.log('Didimount');
 		socket.on('submit', () => {
-			finishGame({ history, userMark: { roomId, marks: totalMarks } });
+			finishGame({ history, userMarks: { roomId, marks: totalMarks } });
 		});
 	}
 	render() {
