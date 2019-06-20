@@ -5,6 +5,7 @@ import socketIo from "../helpers/socket";
 class Waiting extends Component {
   componentWillUpdate(){
     socketIo.on('Alljoined',() =>{
+      console.log('All Joined');
       this.props.history.push('/startGame');
     });
   }
