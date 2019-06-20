@@ -6,7 +6,13 @@ import riderslogo from "../assets/img/riders-logo-png.png";
 const { REACT_APP_API_URL } = process.env;
 
 class Login extends Component {
-
+  
+  componentDidMount() {
+    const { from } = this.props.location.state || { from: { pathname: '/CreateGameRoom' } };;
+    const pathname = from.pathname;
+    localStorage.setItem("urlAfterLogin", pathname);
+  
+ }
   render() { 
     return (
       <div className="container">

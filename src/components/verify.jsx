@@ -6,7 +6,8 @@ class VerifyUser extends Component {
   componentDidMount() {
     const userToken = this.props.match.params.token;
     this.props.loginUser(userToken);
-    this.props.history.push("/CreateGameRoom");
+      this.props.history.push(`${localStorage.urlAfterLogin}`);
+      localStorage.removeItem("urlAfterLogin");
   }
   render() {
     return <h1>Authenticating a user!</h1>;
