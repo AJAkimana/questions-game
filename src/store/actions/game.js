@@ -14,16 +14,14 @@ export const goToNextQuestion = ({ currentQuestion, totalQuestions, userMark, hi
 		Http.post('api/v1/game/marks', userMark)
 			.then((res) => {
 				console.log('Result', res.data);
-				socket.emit('auto_submit', () => {
-					console.log('===>Data from auto submit');
-					history.push('/gameResult');
-				});
+				socket.emit('auto_submit', { name: 'room1' });
+				history.push('/gameResult');
+				console.log('===>Data from auto submit');
 			})
 			.catch((er) => {
-				socket.emit('auto_submit', () => {
-					console.log('===>Data from auto submit');
-					history.push('/gameResult');
-				});
+				socket.emit('auto_submit', { name: 'room1' });
+				history.push('/gameResult');
+				console.log('===>Data from auto submit');
 				console.log('Errot', er);
 			});
 		return {
