@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import riderslogo from '../assets/img/riders-logo-png.png';
-import avatar from '../assets/img/avatar.jpg';
 import { getResults } from '../store/actions/results';
 
 class CreateGameRoom extends Component {

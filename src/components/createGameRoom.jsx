@@ -13,8 +13,16 @@ import {
 
 class CreateGameRoom extends Component {
   state = {};
+  componentDidUpdate (){
+    const room = this.props.invitation.gameRooms;
+    if (room.length){
+    const roomId = room[0].game.id;
+    this.props.history.push(`/waiting/${roomId}`);
+    }
+  
+
+  }
   render() {
-    console.log(this.props);
     return (
       <React.Fragment>
         <img src={riderslogo} alt="Logo" className="header-logo" />
@@ -83,7 +91,6 @@ class CreateGameRoom extends Component {
   handleCreate = () => {
     const { invitation } = this.props;
     this.props.createRoom(invitation.roomName, invitation.invitedUsers);
-    this.props.history.push("/startGame");
   };
 
   handlePlayers = () => {

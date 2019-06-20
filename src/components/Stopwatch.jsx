@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import Countdown from 'react-countdown-now';
 
-const Completionist = () => <h1>You are good to go!</h1>;
+
 
 
 const renderer = ({ hours, minutes, seconds, completed }) => {
   if (completed) {
-    return <Completionist />;
-    // this.props.history.push('/question');
+this.props.history.push('/questions');
   } else {
     return (
       <h1>
