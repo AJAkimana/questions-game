@@ -13,15 +13,17 @@ class Questions extends Component {
 	}
 	componentDidMount() {
 		socket.emit('create', { name: 'room1' });
-		const { handles, history, finishGame } = this.props;
+		const { handles, history, finishGame, invitation } = this.props;
+		const roomId = invitation.gameRooms.room[0].game.id;
 		const { totalMarks } = handles;
 		console.log('Didimount');
 		socket.on('submit', () => {
-			finishGame({ history, userMark: { roomId: 1, marks: totalMarks } });
+			finishGame({ history, userMark: { roomId, marks: totalMarks } });
 		});
 	}
 	render() {
-		const { handles, history } = this.props;
+		const { handles, history, invitation } = this.props;
+		const roomId = invitation.gameRooms.room[0].game.id;
 		const allQuestions = getQns();
 		const { length: count } = allQuestions;
 		const { currentQuestion, questionsDone, totalMarks, currentAnswer } = handles;
@@ -60,7 +62,7 @@ class Questions extends Component {
 							this.props.goToNextQuestion({
 								currentQuestion,
 								totalQuestions: count,
-								userMark: { roomId: 1, marks: totalMarks },
+								userMark: { roomId, marks: totalMarks },
 								history
 							})}
 					>
@@ -75,10 +77,11 @@ const setStyle = (currentAnswer, selectedAnswer) => {
 	return currentAnswer === selectedAnswer ? 'right' : '';
 };
 const mapStateToProps = (state) => {
-	const { handles, auth } = state;
+	const { handles, auth, invitation } = state;
 	return {
 		handles,
-		auth
+		auth,
+		invitation
 	};
 };
 

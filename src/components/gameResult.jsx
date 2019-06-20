@@ -5,7 +5,8 @@ import { getResults } from '../store/actions/results';
 
 class CreateGameRoom extends Component {
 	componentDidMount() {
-		this.props.getResults();
+		const roomId = this.props.invitation.gameRooms.room[0].game.id
+		this.props.getResults(roomId);
 	}
 	badges(marks) {
 		if (marks <= 10 && marks >= 8) {
@@ -52,6 +53,7 @@ class CreateGameRoom extends Component {
 	}
 }
 const mapStateToProps = (state) => ({
-	result: state.result
+	result: state.result,
+	invitation:state.invitation
 });
 export default connect(mapStateToProps, { getResults })(CreateGameRoom);
