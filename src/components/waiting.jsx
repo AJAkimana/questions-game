@@ -3,13 +3,12 @@ import { connect } from "react-redux";
 import socketIo from "../helpers/socket";
 
 class Waiting extends Component {
-  componentWillUpdate(){
+
+  componentDidMount() {
     socketIo.on('Alljoined',() =>{
       console.log('All Joined');
       this.props.history.push('/startGame');
     });
-  }
-  componentDidMount() {
     const roomId = this.props.match.params.roomId;
     const user = this.props.auth.user;
     socketIo.emit('joined', {user,roomId});
