@@ -35,7 +35,7 @@ export const goToNextQuestion = ({ currentQuestion, totalQuestions, userMark, hi
 };
 
 export const finishGame = ({ history, marks }) => {
-	Http.post('/game/marks', marks)
+	Http.post('/api/v1/game/marks', marks)
 		.then((res) => {
 			console.log('Result', res.data);
 			history.push('/gameResult');
