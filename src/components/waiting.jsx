@@ -10,7 +10,7 @@ class Waiting extends Component {
     socket.emit('create', {name: roomId});
     socketIo.on('Alljoined',() =>{
       console.log('All Joined');
-      this.props.history.push('/startGame');
+      this.props.history.push(`/startGame/${roomId}`);
     });
     const user = this.props.auth.user;
     socketIo.emit('joined', {user,roomId});

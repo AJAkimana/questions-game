@@ -14,16 +14,16 @@ const Routes = (props) => {
 	return (
 		<Switch>
 			<Route path="/login" component={Login} />
-			<PrivateRoute path="/gameResult" component={GameResult} isAuthenticated={props.auth.isAuthenticated} />
+			<PrivateRoute path="/gameResult/:roomId" component={GameResult} isAuthenticated={props.auth.isAuthenticated} />
 			<PrivateRoute
 				path="/CreateGameRoom"
 				component={CreateGameRoom}
 				isAuthenticated={props.auth.isAuthenticated}
 			/>
-			<PrivateRoute path="/questions" component={Questions} isAuthenticated={props.auth.isAuthenticated} />
+			<PrivateRoute path="/questions/:roomId" component={Questions} isAuthenticated={props.auth.isAuthenticated} />
 			<Route path="/verify/:token" component={Verify} />
 			<PrivateRoute path="/waiting/:roomId" component={Waiting} isAuthenticated={props.auth.isAuthenticated} />
-			<PrivateRoute path="/startGame" component={startGame} isAuthenticated={props.auth.isAuthenticated} />
+			<PrivateRoute path="/startGame/:roomId" component={startGame} isAuthenticated={props.auth.isAuthenticated} />
 			<Redirect from="/" to="/login" />
 		</Switch>
 	);

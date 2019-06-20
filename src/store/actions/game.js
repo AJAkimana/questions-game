@@ -15,12 +15,12 @@ export const goToNextQuestion = ({ currentQuestion, totalQuestions, userMark, hi
 			.then((res) => {
 				console.log('Result', res.data);
 				socket.emit('auto_submit', { name: 'room1' });
-				history.push('/gameResult');
+				history.push(`/gameResult/${userMark.roomId}`);
 				console.log('===>Data from auto submit');
 			})
 			.catch((er) => {
 				socket.emit('auto_submit', { name: 'room1' });
-				history.push('/gameResult');
+				history.push(`/gameResult/${userMark.roomId}`);
 				console.log('===>Data from auto submit');
 				console.log('Errot', er);
 			});
@@ -38,7 +38,7 @@ export const finishGame = ({ history, marks }) => {
 	Http.post('/api/v1/game/marks', marks)
 		.then((res) => {
 			console.log('Result', res.data);
-			history.push('/gameResult');
+			history.push(`/gameResult/${marks.roomId}`);		
 		})
 		.catch((er) => {
 			console.log('Errot', er);
