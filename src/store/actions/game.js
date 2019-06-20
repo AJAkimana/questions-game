@@ -34,11 +34,11 @@ export const goToNextQuestion = ({ currentQuestion, totalQuestions, userMark, hi
 	};
 };
 
-export const finishGame = ({ history, marks }) => {
-	Http.post('/api/v1/game/marks', marks)
+export const finishGame = ({ history, userMarks }) => {
+	Http.post('/api/v1/game/marks', userMarks)
 		.then((res) => {
 			console.log('Result', res.data);
-			history.push(`/gameResult/${marks.roomId}`);		
+			history.push(`/gameResult/${userMarks.roomId}`);		
 		})
 		.catch((er) => {
 			console.log('Errot', er);
