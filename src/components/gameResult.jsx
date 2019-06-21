@@ -6,8 +6,10 @@ import { getResults } from '../store/actions/results';
 
 class GameResult extends Component {
 	componentDidMount() {
+		setTimeout(() => {
 			const roomId = this.props.match.params.roomId;
 			this.props.getResults(roomId);
+		}, 5000);
 	}
 	badges(marks) {
 		if (marks <= 10 && marks >= 8) {
