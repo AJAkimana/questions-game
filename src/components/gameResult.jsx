@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 import riderslogo from '../assets/img/riders-logo-png.png';
 import { getResults } from '../store/actions/results';
 
-class CreateGameRoom extends Component {
+class GameResult extends Component {
 	componentDidMount() {
-		const roomId = this.props.match.params.roomId;		
-		this.props.getResults(roomId);
+		setTimeout(() => {
+			const roomId = this.props.match.params.roomId;
+			this.props.getResults(roomId);
+		}, 5000);
 	}
 	badges(marks) {
 		if (marks <= 10 && marks >= 8) {
@@ -55,4 +57,4 @@ class CreateGameRoom extends Component {
 const mapStateToProps = (state) => ({
 	result: state.result
 });
-export default connect(mapStateToProps, { getResults })(CreateGameRoom);
+export default connect(mapStateToProps, { getResults })(GameResult);
