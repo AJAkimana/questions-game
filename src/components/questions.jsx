@@ -14,7 +14,7 @@ class Questions extends Component {
 	componentDidMount() {
 		socket.emit('create', { name: 'room1' });
 		const { handles, history, finishGame } = this.props;
-		const roomId = this.props.match.params.roomId;    
+		const roomId = this.props.match.params.roomId;
 		const { totalMarks } = handles;
 		console.log('Didimount');
 		socket.on('submit', () => {
@@ -23,7 +23,7 @@ class Questions extends Component {
 	}
 	render() {
 		const { handles, history } = this.props;
-		const roomId = this.props.match.params.roomId;    		
+		const roomId = this.props.match.params.roomId;
 		const allQuestions = getQns();
 		const { length: count } = allQuestions;
 		const { currentQuestion, questionsDone, totalMarks, currentAnswer } = handles;
