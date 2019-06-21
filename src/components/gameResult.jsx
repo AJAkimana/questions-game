@@ -62,6 +62,7 @@ class GameResult extends Component {
 	}
 }
 const mapStateToProps = (state) => ({
-	result: state.result
+	result: state.result,
+	auth:state.auth
 });
 export default connect(mapStateToProps, { getResults })(GameResult);

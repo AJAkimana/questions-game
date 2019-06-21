@@ -21,9 +21,9 @@ class Waiting extends Component {
     return (
 			<React.Fragment>
 				<img src={riderslogo} alt="Logo" className="header-logo" />
-				<div className="container create-game-room">
+				<div className="container">
 					<h1>Waiting for other user to JOIN !!</h1>
-          <img src={loading} alt="Loading"/>
+          <img src={loading} alt="Loading" style={{ width: "20%" }}/>
 				</div>
 			</React.Fragment>
 		);
