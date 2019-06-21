@@ -27,7 +27,7 @@ class Questions extends Component {
 		const { length: count } = allQuestions;
 		const { currentQuestion, totalMarks, currentAnswer } = handles;
 		const questions = paginate(allQuestions, currentQuestion, 1);
-		const submitButtonTitle = currentQuestion >= 7 ? 'Finish game' : 'Next question';
+		const submitButtonTitle = currentQuestion >= count ? 'Finish game' : 'Next question';
 		return (
 			<div className="container">
 				{questions.map((question, index) => (
