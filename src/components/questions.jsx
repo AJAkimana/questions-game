@@ -28,6 +28,7 @@ class Questions extends Component {
 		const { currentQuestion, totalMarks, currentAnswer } = handles;
 		const questions = paginate(allQuestions, currentQuestion, 1);
 		const submitButtonTitle = currentQuestion >= count ? 'Finish game' : 'Next question';
+		console.log('Goomm:====>',this.props)
 		return (
 			<div className="container">
 				{questions.map((question, index) => (
