@@ -32,7 +32,7 @@ export const handleQuestion = (state = initalState, action) => {
 			}
 			return state;
 		case GO_NEXT:
-			if (action.payload >= 7) return state;
+			if (action.payload >= 10) return state;
 			return {
 				...state,
 				isDone: false,
