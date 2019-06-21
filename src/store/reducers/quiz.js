@@ -9,7 +9,6 @@ const initalState = {
 };
 
 export const handleQuestion = (state = initalState, action) => {
-	console.log('quiz reducer:', action);
 	switch (action.type) {
 		case SELECT_ANSWER:
 			const { payload } = action;

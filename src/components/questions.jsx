@@ -16,7 +16,6 @@ class Questions extends Component {
 		const { handles, history, finishGame } = this.props;
 		const roomId = this.props.match.params.roomId;
 		const { totalMarks } = handles;
-		console.log('Didimount');
 		socket.on('submit', () => {
 			finishGame({ history, userMarks: { roomId, marks: totalMarks } });
 		});
@@ -26,10 +25,9 @@ class Questions extends Component {
 		const roomId = this.props.match.params.roomId;
 		const allQuestions = getQns();
 		const { length: count } = allQuestions;
-		const { currentQuestion, questionsDone, totalMarks, currentAnswer } = handles;
+		const { currentQuestion, totalMarks, currentAnswer } = handles;
 		const questions = paginate(allQuestions, currentQuestion, 1);
 		const submitButtonTitle = currentQuestion >= 7 ? 'Finish game' : 'Next question';
-		console.log('QD:', questionsDone);
 		return (
 			<div className="container">
 				{questions.map((question, index) => (
