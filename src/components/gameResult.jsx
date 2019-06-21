@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import riderslogo from '../assets/img/riders-logo-png.png';
+import Dashboard from "./userDashboard";
 import { getResults } from '../store/actions/results';
 
 class GameResult extends Component {
@@ -25,6 +26,7 @@ class GameResult extends Component {
 			return (
 				<React.Fragment>
 					<img src={riderslogo} alt="Logo" className="header-logo" />
+					<div className="grid">
 					<div className="container create-game-room overflow">
 						<h1>Game Result</h1>
 						{results.map((result) => (
@@ -41,14 +43,19 @@ class GameResult extends Component {
 							</div>
 						))}
 					</div>
+					<Dashboard userInfo={this.props.auth} />
+					</div>
 				</React.Fragment>
 			);
 		}
 		return (
 			<React.Fragment>
 				<img src={riderslogo} alt="Logo" className="header-logo" />
+				<div className="grid">
 				<div className="container create-game-room">
 					<h1>Loading...</h1>
+				</div>
+				<Dashboard userInfo={this.props.auth} />
 				</div>
 			</React.Fragment>
 		);
