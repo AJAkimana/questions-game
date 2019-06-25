@@ -1,6 +1,7 @@
-## Badges
-<a href="https://codeclimate.com/github/AJAkimana/questions-game/maintainability"><img src="https://api.codeclimate.com/v1/badges/5b1813a12a4d46718593/maintainability" /></a> <a href="https://codeclimate.com/github/AJAkimana/questions-game/test_coverage"><img src="https://api.codeclimate.com/v1/badges/5b1813a12a4d46718593/test_coverage" /></a>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Badges
+[![Maintainability](https://api.codeclimate.com/v1/badges/5b1813a12a4d46718593/maintainability)](https://codeclimate.com/github/AJAkimana/questions-game/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/5b1813a12a4d46718593/test_coverage)](https://codeclimate.com/github/AJAkimana/questions-game/test_coverage) [![Build Status](https://travis-ci.org/AJAkimana/questions-game.svg?branch=develop)](https://travis-ci.org/AJAkimana/questions-game)
+
 
 ## Available Scripts
 
