@@ -1,3 +1,5 @@
+## Badges
+<a href="https://codeclimate.com/github/AJAkimana/questions-game/maintainability"><img src="https://api.codeclimate.com/v1/badges/5b1813a12a4d46718593/maintainability" /></a> <a href="https://codeclimate.com/github/AJAkimana/questions-game/test_coverage"><img src="https://api.codeclimate.com/v1/badges/5b1813a12a4d46718593/test_coverage" /></a>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
