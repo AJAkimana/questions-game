@@ -62,3 +62,5 @@ typings/
 
 # Package .lock
 package-lock.json
+# 
+postgres-data

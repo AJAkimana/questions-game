@@ -12,7 +12,7 @@ services:
       - POSTGRES_USER= ${DB_USER}
       - POSTGRES_PASSWORD= ${DB_PASSWORD}
   server:
-    image: ridersah_server
+    build: .
     restart: always
     depends_on:
       - db
@@ -37,18 +37,17 @@ services:
       - APP_EMAIL=${APP_EMAIL}
       - APP_LINK=${APP_LINK}
       - SENDGRID_API_KEY=${SENDGRID_API_KEY}
-  client:        
-    image: riders-game        
-    restart: always        
-    ports:            
-      - "3005:3005"        
-    volumes:            
-      - ./client:/client            
-      - /client/node_modules        
-    links:            
-      - server        
-    networks:            
+    networks:      
       - webappnetwork
-networks:    
+  client:
+    build: ../QuestionsGame   
+    restart: always  
+    ports:        
+      - "3005:3005"
+    links:     
+      - server
+    networks:   
+      - webappnetwork
+networks:
   webappnetwork:        
     driver: bridge
