@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Badges
-[![Maintainability](https://api.codeclimate.com/v1/badges/5b1813a12a4d46718593/maintainability)](https://codeclimate.com/github/AJAkimana/questions-game/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/5b1813a12a4d46718593/test_coverage)](https://codeclimate.com/github/AJAkimana/questions-game/test_coverage) [![Build Status](https://travis-ci.org/AJAkimana/questions-game.svg?branch=develop)](https://travis-ci.org/AJAkimana/questions-game)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5b1813a12a4d46718593/maintainability)](https://codeclimate.com/github/AJAkimana/questions-game/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/5b1813a12a4d46718593/test_coverage)](https://codeclimate.com/github/AJAkimana/questions-game/test_coverage) [![Build Status](https://travis-ci.org/AJAkimana/questions-game.svg?branch=develop)](https://travis-ci.org/AJAkimana/questions-game) [![CircleCI](https://circleci.com/gh/AJAkimana/questions-game.svg?style=svg)](https://circleci.com/gh/AJAkimana/questions-game)
 
 
 ## Available Scripts
